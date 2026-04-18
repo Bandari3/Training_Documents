@@ -2184,3 +2184,215 @@ Next :::
 		Working with MLOps using ML Project
 			
 			- git, dvc, s3, docker, mlflow, kubernetes	==> CICD using Github-Actions 
+
+
+			
+
+######################
+Day-7 | 18th Apr. 2026
+######################				
+			
+	Version Control System :::
+	
+	
+		- GitHub 							Application_Artifactory Library 					DockerHub 
+													JFrog / Az_Artifacts
+													
+			Source_Code 							Artifacts --> *.pkl								Application Images 
+			
+				mywebapi.py_v1.1	-->				mywebapi.pkl_v1.1			------>			mywebapi_Image:v1.1
+				mywebapi.py_v1.2	-->				mywebapi.pkl_v1.2			------>			mywebapi_Image:v1.2
+				mywebapi.py_v1.3	-->				mywebapi.pkl_v1.3			------>			mywebapi_Image:v1.3
+			
+			
+			
+	Core Kubernetes Concepts :
+	
+		Kubernetes Architecture Components 
+		
+		
+			Kubernetes_Master 
+			
+				- Kubernetes WorkNodes1,2,3 
+		
+			- API Server 
+			
+			- ETCD 					-> Single Point of 
+			
+			- Scheduler 
+			
+			- Controller Manager 	-> To ensure that the pods are running in its desired state.
+			
+			- Kubelet 				-> Kubernetes Agent reposible to deploy the Pods
+			
+			- Kubeproxy 
+			
+			- CRI - Container-D 
+				
+	
+		
+			
+
+	
+				
+				Non-Containerized
+				
+						*.pkl
+				
+					Production Servers :: 1,2,3,4,5,6,7,8
+				
+					5 Replicas of Pods ::
+
+			Kubernetes_Master(VM) 
+			
+				- Kubernetes WorkNodes-1,2,3,4,5,6,7,8					# Run the Application pods
+					
+					16 replicas of pod instance 
+
+			Kubernetes_Master(VM) 
+			
+				Cluster1:
+					- Kubernetes WorkNode1(VM)
+					- Kubernetes WorkNode2(VM)
+					- Kubernetes WorkNode3(VM)
+
+				Cluster2:
+					- Kubernetes WorkNode1(VM)
+					- Kubernetes WorkNode2(VM)
+					- Kubernetes WorkNode3(VM)				
+				
+		- Terminologies :::
+		
+			Kubernetes Cluster 			# It is the collection of workernodes
+			
+			Container Image 
+			
+			Container 
+
+			kubectl 					# Is a Command Line utility used to interact with Kubernetes_Master
+			
+			Kubelet 					# Kubernetes Agent reposible to deploy the Pods
+			
+			Pod 						# Pod is the smallest/Atomic unit of scheduling 
+			
+			1 Micro-Service -> deployed in 1 One pod instance --> 5 replicas
+			
+			
+		Working with Pods :::
+
+			Create the Manifest File - using *.yaml / *.json file. 
+			
+				POD Replicas --> 
+				
+				- Kubernetes WorkNodes-1,2,3,4,5,6,7,8					# Run the Application pods
+					
+					16 replicas of pod instance 	
+
+					Eg.:
+					
+						50 replicas of pods to support 5000 Users
+						
+						10000 users 
+						
+						
+						Auto-Scaling :::
+						
+							--> Monitoring : CPU,Momory,Network Traffic 
+							
+								- min > max 
+						
+						
+						amazon.com 
+						
+						Online reservation - 
+						
+						
+						
+							
+					
+					
+
+		
+						
+		Kubernetes Pods 
+		
+		Kubernetes Deployments 
+		
+		Kubernetes Service 
+		
+		
+		Setup the Kubernetes Cluster ::::
+		
+			- Single Node Cluster. 
+			
+				- Can be created using Kubernetes Utilities like :  minikube / k3s / KIND 
+				
+				Kubernetes_Master(VM) 
+			
+			- Multi-Node Cluster.
+				
+				- kubeadm(Production_grade - with multinode cluster)
+
+				Kubernetes_Master(VM) 	==>  AWS/AZURE/On-Premise Server - AS & Load Balancers 
+				
+					Cluster1 :								AWS-Mumbai Region
+						- Kubernetes WorkNode1(VM)
+						- Kubernetes WorkNode2(VM)
+						- Kubernetes WorkNode3(VM)
+					
+					Cluster2 :								AWS-Tokyo Region
+						- Kubernetes WorkNode1(VM)
+						- Kubernetes WorkNode2(VM)
+						- Kubernetes WorkNode3(VM)				
+				
+				
+					Cluster3 :								Azure-Mumbai Region
+						- Kubernetes WorkNode1(VM)
+						- Kubernetes WorkNode2(VM)
+						- Kubernetes WorkNode3(VM)
+					
+					Cluster4 :								Azure-Tokyo Region
+						- Kubernetes WorkNode1(VM)
+						- Kubernetes WorkNode2(VM)
+						- Kubernetes WorkNode3(VM)		
+
+		
+		-  Setup Cluster ::::	
+		
+			Kubernetes :::: 
+			
+			kubeadm - (Production_grade - with multinode cluster) :::
+			
+				Kubernetes_Master(VM) 	==>  			AWS
+					- Kubernetes WorkNode1(VM)
+					- Kubernetes WorkNode2(VM)
+					
+			Kubernetes Architecture :::
+			
+				Open-Source Kubernetes using Kubeadm 
+					
+					https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+				
+				
+				
+				
+				Managed Services :
+				
+					AWS		: EKS 
+					Azure 	: AKS 
+					GCP		: GCE 
+
+		
+Next :::
+		
+	MLOps :
+		
+		Kubeflow 
+
+		Working with MLOps using ML Project
+			
+			- git, dvc, s3, docker, mlflow, kubernetes	==> CICD using Github-Actions 	
+
+
+		- AWS Sagemaker-AI 
+			
